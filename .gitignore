@@ -1,3 +1,8 @@
 /target
 /.idea
 /.checkpoint
+/.settings
+/.classpath
+/.project
+/dependency-reduced-pom.xml
+/spark-pipeline.iml
