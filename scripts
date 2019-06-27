@@ -20,6 +20,12 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic messages
     - A topic can have several consumers
 
 Cassandra CQL Shell
+bin/cqlsh
+- entering vocabulary key space
+	- describe key spaces
+	- USE vocabulary;
+	- SELECT * FROM words;
+
 CREATE KEYSPACE vocabulary
     WITH REPLICATION = {
         'class' : 'SimpleStrategy',
@@ -36,4 +42,8 @@ Data Flow
 Kafka Topic —> Spark Streaming —> Cassandra Table
 
 spark-submit --class com.billsheng.SparkPipelineApplication --master local target/spark-pipeline-1.0-SNAPSHOT.jar 
+
+Checkpoints
+- retain state between batches of data being processed
+- should store checkpoints in hdfs, s3, kafka 
 
