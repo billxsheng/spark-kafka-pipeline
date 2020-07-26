@@ -1,0 +1,17 @@
+batch ingest/processing
+- data collected over time then fed into an analytics system
+- you collect a batch
+- mapreduce
+
+stream ingest/processing
+- data is fed piece by piece (real time)
+- spark
+- event at a time (apache storm), micro-batching (spark streaming; tiny groups of events processed), event window processing 
+
+other libraries such as ml and sql on spark
+- twitter sentiment
+- brings analysis quickly
+
+apache spark
+- in-memory objects for distriuted compute, 100 times faster than mapreduce 
+- integration of other libraries, ml and spark sql
